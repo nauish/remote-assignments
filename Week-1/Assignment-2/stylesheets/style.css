@@ -29,10 +29,21 @@ ul {
   list-style: none;
 }
 
-.content-box {
+.content-box-container {
+  width: 80%;
   max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.content-box {
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8b98a8;
 }
 
 .nav-left {
@@ -49,7 +60,8 @@ nav {
 }
 
 .call-to-action {
-  background-color: #cfdded;
+  background-color: #e0edfd;
   border: 0;
   padding: 10px;
+  margin-top: 20px;
 }
