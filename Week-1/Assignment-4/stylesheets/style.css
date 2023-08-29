@@ -7,7 +7,7 @@ body {
   color: #202124;
 }
 
-nav {
+.nav-top {
   display: flex;
   background-color: white;
   justify-content: space-between;
@@ -18,6 +18,8 @@ nav {
   font-size: 14px;
   color: #5f6368;
   position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .nav-menu {
@@ -31,6 +33,21 @@ nav {
 
 li {
   list-style-type: none;
+}
+
+.wrapper {
+  margin-top: 48.8px;
+}
+
+.banner {
+  background-color: #f1f3f4;
+  padding: 20px 24px 19px;
+  font-size: 14px;
+}
+
+.banner-info {
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
