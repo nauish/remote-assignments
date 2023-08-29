@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AppWorks for Developers</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
     <header>
@@ -18,18 +19,27 @@
             <li>Community</li>
           </ul>
         </div>
-        <div class="nav-right"></div>
+        <div class="nav-right">
+          <input type="text" placeholder="搜尋結果" />
+          <select name="language" id="language">
+            <option value="zh-tw">中文 - 繁體</option>
+            <option value="en-us">English - US</option>
+          </select>
+          <img class="profile-icon" src="" alt="My Profile" />
+        </div>
       </nav>
     </header>
     <main>
       <div class="hero-container">
         <div class="hero-left">
-          <h1>聰明智慧加速運送</h1>
-          <p>使用開放式的整合是解決方案發會創意並簡化工作流程</p>
+          <h1>聰明智慧<br />加速運送</h1>
+          <p class="hero-left-description">
+            使用開放式的整合式解決方案發會創意並簡化工作流程
+          </p>
         </div>
         <div class="hero-right">
           <video src="" autoplay="yes"></video>
-          <h2 class="hero-btn-list">我建立的應用程式：</h2>
+          <p class="hero-btn-list">我建立的應用程式：</p>
           <button>行動裝置</button>
           <button>網路</button>
           <button>AI</button>
@@ -56,8 +66,8 @@
           </div>
         </section>
         <div class="product-container">
-          <h2>精選產品</h2>
-          <div class="product">
+          <h2 class="product-title">精選產品</h2>
+          <div class="product-container">
             <img class="product-icon" src="" alt="" />
             <h3 class="product-name">Android</h3>
             <p class="product-description">
@@ -89,7 +99,18 @@
       </div>
     </aside>
     <footer>
-      <nav></nav>
+      <nav>
+        <div class="nav-upper"></div>
+        <div class="nav-lower">
+          <ul>
+            <li>Android</li>
+            <li>Chrome</li>
+            <li>Firebase</li>
+            <li>Google Cloud Platform</li>
+            <li>所有產品</li>
+          </ul>
+        </div>
+      </nav>
     </footer>
   </body>
 </html>
