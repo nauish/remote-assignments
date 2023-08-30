@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   color: #202124;
+  font-family: "Open Sans", sans-serif;
 }
 
 .nav-top {
@@ -15,12 +16,20 @@ body {
     rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
   padding: 0 16px;
   height: 48px;
-  font-family: "Google Sans", "Noto Sans TC", sans-serif;
+
   font-size: 14px;
   color: #5f6368;
   position: fixed;
   width: 100%;
   top: 0;
+}
+
+.nav-right input {
+  margin: 8px;
+  background-color: rgb(232, 234, 237);
+  border: 0;
+  border-radius: 2px 2px;
+  font-size: 16px;
 }
 
 .nav-menu {
@@ -41,9 +50,12 @@ li {
 }
 
 .banner {
-  background-color: #f1f3f4;
   padding: 20px 24px 19px;
   font-size: 14px;
+}
+
+.grey-background {
+  background-color: #f1f3f4;
 }
 
 .banner-info {
@@ -56,10 +68,22 @@ h1 {
   font-size: 80px;
 }
 
+video {
+  object-fit: contain;
+  max-width: 100%;
+}
+
 .hero-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
   margin: 24px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-left-description {
@@ -73,4 +97,34 @@ h1 {
 
 h2 {
   font-size: 48px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.profile-carousel {
+  padding: 24px;
+}
+
+.profile-btn li {
+  display: inline;
+}
+
+.article-slideshow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.grey-border {
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px 8px;
+  background-color: #ffffff;
+}
+
+.black-solid-btn {
+  border: 1.6px solid rgb(32, 33, 36);
+  border-radius: 4px 4px;
+  background-color: white;
+  color: rgb(26, 115, 232);
+  padding: 6px 24px;
+  margin: 4px;
 }
