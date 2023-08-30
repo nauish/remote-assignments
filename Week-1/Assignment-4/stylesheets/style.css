@@ -19,7 +19,7 @@ body {
   font-size: 14px;
   color: #5f6368;
   position: fixed;
-  width: 100%;
+  width: 99%;
   top: 0;
 }
 
@@ -61,6 +61,8 @@ li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .banner-info-left {
@@ -73,15 +75,17 @@ h1 {
 }
 
 iframe {
-  width: 100%;
+  min-width: 300px;
+  width: 40vw;
   aspect-ratio: 16 / 9;
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 24px;
-  margin: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 24px auto;
 }
 
 .hero-left {
@@ -104,13 +108,9 @@ h2 {
   font-family: "Open Sans", sans-serif;
 }
 
-.profile-carousel {
-  padding: 24px;
-}
-
 .article-slideshow {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
 }
 
@@ -122,7 +122,7 @@ h2 {
   margin: 8px 5px;
 }
 
-.grey-border:first-child {
+a.grey-border:first-child {
   margin-left: 0;
 }
 
@@ -133,6 +133,11 @@ h2 {
   color: rgb(26, 115, 232);
   padding: 6px 24px;
   margin: 4px;
+}
+
+.profile-icon {
+  border-radius: 50% 50%;
+  height: auto;
 }
 
 .black-solid-btn:first-child {
@@ -147,4 +152,70 @@ a {
   font-weight: bold;
   font-size: 6px;
   text-transform: uppercase;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1440px;
+}
+
+@media screen and (max-width: 830px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-container {
+  flex-wrap: wrap;
+  flex-basis: 340px;
+}
+
+.blue-btn {
+  background-color: #1a73e8;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px 4px;
+  padding: 8px 20px;
+  margin: 40px;
+}
+
+.featured,
+.news-item {
+  display: flex;
+}
+
+.profile-upper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 24px auto 12px auto;
+}
+
+.profile {
+  margin: 36px 8px 16px;
+}
+
+.width {
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .width {
+    margin: 24px;
+  }
 }
