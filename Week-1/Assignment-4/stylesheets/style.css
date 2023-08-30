@@ -60,6 +60,7 @@ li {
 .banner-info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .banner-info-left {
@@ -121,6 +122,10 @@ h2 {
   margin: 8px 5px;
 }
 
+.grey-border:first-child {
+  margin-left: 0;
+}
+
 .black-solid-btn {
   border: 1.6px solid rgb(32, 33, 36);
   border-radius: 4px 4px;
@@ -128,4 +133,18 @@ h2 {
   color: rgb(26, 115, 232);
   padding: 6px 24px;
   margin: 4px;
+}
+
+.black-solid-btn:first-child {
+  margin-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.article-catogory {
+  font-weight: bold;
+  font-size: 6px;
+  text-transform: uppercase;
 }
