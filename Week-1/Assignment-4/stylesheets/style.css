@@ -68,9 +68,9 @@ h1 {
   font-size: 80px;
 }
 
-video {
-  object-fit: contain;
-  max-width: 100%;
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .hero-container {
@@ -104,10 +104,6 @@ h2 {
   padding: 24px;
 }
 
-.profile-btn li {
-  display: inline;
-}
-
 .article-slideshow {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -118,6 +114,8 @@ h2 {
   border: 1px solid rgb(218, 220, 224);
   border-radius: 8px 8px;
   background-color: #ffffff;
+  padding: 6px 16px;
+  margin: 8px 5px;
 }
 
 .black-solid-btn {
