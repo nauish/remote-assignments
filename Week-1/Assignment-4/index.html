@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AppWorks for Developers</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav-top">
         <div class="nav-logo">AppWorks for Developers</div>
         <div class="nav-mid">
           <ul class="nav-menu">
@@ -29,47 +35,120 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="hero-container">
-        <div class="hero-left">
-          <h1>聰明智慧<br />加速運送</h1>
-          <p class="hero-left-description">
-            使用開放式的整合式解決方案發會創意並簡化工作流程
-          </p>
-        </div>
-        <div class="hero-right">
-          <video src="" autoplay="yes"></video>
-          <p class="hero-btn-list">我建立的應用程式：</p>
-          <button>行動裝置</button>
-          <button>網路</button>
-          <button>AI</button>
-          <button>Cloud</button>
-        </div>
-      </div>
-      <div class="profile-carousel">
-        <section class="carousel-btn-list">
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-          </ul>
-        </section>
-        <section class="article-list">
-          <div class="carousel-article">
-            <p class="article-catogory">Marketing</p>
-            <h3>資料存取透明化控管機制</h3>
-            <p class="article-desciption">
-              資料存取透明化控管機制能提供近乎即時的繼續檔
-            </p>
-            <div class="aritcle-icon">
-              <img src="" alt="" />
+    <section class="wrapper">
+      <main>
+        <div class="banner grey-background">
+          <div class="banner-info">
+            <div class="banner-info-left">
+              本頁面由 Rick Li 李奇軒臨摹
+              <a href="https://developers.google.com/?hl=zh-tw"
+                >Google Developers</a
+              >學習而成
+            </div>
+            <div class="banner-info-right">
+              <button>My GitHub</button>
             </div>
           </div>
-        </section>
-        <div class="product-container">
-          <h2 class="product-title">精選產品</h2>
+        </div>
+        <div class="hero-container">
+          <div class="hero-left">
+            <h1>聰明智慧<br />加速運送</h1>
+            <p class="hero-left-description">
+              使用開放式的整合式解決方案發揮創意並簡化工作流程
+            </p>
+          </div>
+          <div class="hero-right">
+            <video autoplay loop muted>
+              <source
+                src="static/person_typing_fast (720p).mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p class="hero-btn-list">我建立的應用程式：</p>
+            <button>行動裝置</button>
+            <button>網路</button>
+            <button>AI</button>
+            <button>Cloud</button>
+          </div>
+        </div>
+        <div class="profile-carousel grey-background">
+          <span>依據開發人員設定檔的興趣</span>
+          <section class="carousel-btns">
+            <ul>
+              <li><button>行動</button></li>
+              <li><button>地圖</button></li>
+              <li><button>IoT</button></li>
+              <li><button>設計</button></li>
+              <li><button>智慧住宅</button></li>
+            </ul>
+          </section>
+          <div class="article-slideshow">
+            <div class="article-item">
+              <p class="article-catogory">Marketing</p>
+              <h3>資料存取透明化控管機制</h3>
+              <p class="article-desciption">
+                資料存取透明化控管機制能提供近乎即時的繼續檔
+              </p>
+              <div class="aritcle-icon">
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-landing-row">
+          <h2 class="product-landing-title">精選產品</h2>
           <div class="product-container">
             <img class="product-icon" src="" alt="" />
             <h3 class="product-name">Android</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Cloud</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">TensorFlow</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Chrome</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Play</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Firebase</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Flutter</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="product-container">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Ads</h3>
             <p class="product-description">
               現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
             </p>
@@ -85,32 +164,86 @@
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <aside>
-      <div class="aside-left">
-        <img src="" alt="Android Studio Giraffe" />
-      </div>
-      <div class="aside-right">
-        <p class="aside-tag">Android 新功能</p>
-        <h2>Android Studio Giraffe 現已穩定</h2>
-        <p></p>
-        <button>立即下載</button>
-      </div>
-    </aside>
-    <footer>
-      <nav>
-        <div class="nav-upper"></div>
-        <div class="nav-lower">
-          <ul>
-            <li>Android</li>
-            <li>Chrome</li>
-            <li>Firebase</li>
-            <li>Google Cloud Platform</li>
-            <li>所有產品</li>
-          </ul>
+      </main>
+      <section class="featured grey-background">
+        <div class="aside-left">
+          <img src="" alt="Android Studio Giraffe" />
         </div>
-      </nav>
-    </footer>
+        <div class="aside-right">
+          <p class="aside-tag">Android 新功能</p>
+          <h2>Android Studio Giraffe 現已穩定</h2>
+          <p>包括即時編輯、Compose 動畫預覽、全新的裝置探索工具等更新。</p>
+          <button>立即下載</button>
+        </div>
+      </section>
+      <section class="hero-action-container">
+        <div class="hero-action-item">
+          <div class="action-left">
+            <img src="" alt="" />
+          </div>
+          <div class="action-right">
+            <h3>尋找活動</h3>
+            <p>透過線上和現場開發人員活動增進知識。</p>
+          </div>
+        </div>
+        <div class="hero-action-item">
+          <div class="action-left">
+            <img src="" alt="" />
+          </div>
+          <div class="action-right">
+            <h3>提升技術能力</h3>
+            <p>透過線上和現場開發人員活動增進知識。</p>
+          </div>
+        </div>
+        <div class="hero-action-item">
+          <div class="action-left">
+            <img src="" alt="" />
+          </div>
+          <div class="action-right">
+            <h3>加入社群</h3>
+            <p>透過線上和現場開發人員活動增進知識。</p>
+          </div>
+        </div>
+      </section>
+      <section class="landing-social">
+        <h2>追蹤 Google Developer 開發人員</h2>
+        <div class="landing-social-container">
+          <div class="landing-social-item">
+            <h3>YouTube</h3>
+            <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
+            <button>瞭解詳情</button>
+          </div>
+          <div class="landing-social-item">
+            <h3>Instagram</h3>
+            <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
+            <button>瞭解詳情</button>
+          </div>
+          <div class="landing-social-item">
+            <h3>LinkedIn</h3>
+            <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
+            <button>瞭解詳情</button>
+          </div>
+          <div class="landing-social-item">
+            <h3>X</h3>
+            <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
+            <button>瞭解詳情</button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-upper"></div>
+          <div class="nav-lower">
+            <ul>
+              <li>Android</li>
+              <li>Chrome</li>
+              <li>Firebase</li>
+              <li>Google Cloud Platform</li>
+              <li>所有產品</li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+    </section>
   </body>
 </html>
