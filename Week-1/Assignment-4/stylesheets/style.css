@@ -193,7 +193,7 @@ a {
 
 .article-catogory {
   font-weight: bold;
-  font-size: 6px;
+  font-size: smaller;
   text-transform: uppercase;
 }
 
@@ -309,6 +309,15 @@ select:hover {
   border-bottom: 1px solid rgb(218, 220, 224);
 }
 
+.nav-upper h3 {
+  font-weight: 400;
+}
+
+.nav-upper li {
+  font-size: 14px;
+  padding: 8px 0;
+}
+
 .nav-mid {
   display: flex;
   font-size: 14px;
@@ -319,6 +328,7 @@ select:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   border-top: 1px solid rgb(218, 220, 224);
 }
 
