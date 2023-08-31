@@ -11,6 +11,8 @@ function countAandB(input) {
 }
 function toNumber(input) {
   // your code here
+  // I created a match object to map the letters to numbers to practice getting key values using match().
+  // I also tried using ASCII and forEach() method in the toNumberAscii function to get the same result.
   const match = {
     a: 1,
     b: 2,
@@ -45,6 +47,18 @@ function toNumber(input) {
   }
   return numberArr;
 }
+
+function toNumberAscii(input) {
+  const numberArr = [];
+  input.forEach((letter) => {
+    numberArr.push(letter.charCodeAt(0) - 96);
+  });
+  return numberArr;
+}
+
+console.log(toNumberAscii(["a", "b", "c", "a", "c", "a", "c"]));
+console.log(toNumberAscii(["e", "d", "c", "d", "e"]));
+
 let input1 = ["a", "b", "c", "a", "c", "a", "c"];
 console.log(countAandB(input1)); // should print 4 (3 ‘a’ letters and 1 ‘b’ letter)
 console.log(toNumber(input1)); // should print [1, 2, 3, 1, 3, 1, 3]
