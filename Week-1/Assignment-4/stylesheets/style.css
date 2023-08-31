@@ -65,7 +65,7 @@ select {
   gap: 20px;
 }
 
-.nav-left a {
+.logo {
   margin: auto;
   font-weight: 600;
   font-size: large;
@@ -429,8 +429,8 @@ img {
 .dropdown-items {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: white;
+  min-width: 200px;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
   padding: 0px 12px;
@@ -440,4 +440,8 @@ img {
 
 .dropdown:hover .dropdown-items {
   display: block;
+}
+
+.nav-left a:visited {
+  color: #545555;
 }
