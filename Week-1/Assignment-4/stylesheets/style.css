@@ -93,6 +93,7 @@ main {
 .banner-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .banner-info-left {
