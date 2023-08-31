@@ -15,8 +15,11 @@
   <body>
     <header>
       <nav class="nav-top">
-        <div class="nav-logo">AppWorks for Developers</div>
-        <div class="nav-mid">
+        <div class="nav-left">
+          <img
+            src="https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/images/lockup-new.svg"
+            alt=""
+          />
           <ul class="nav-menu">
             <li>Products</li>
             <li>Solutions</li>
@@ -26,7 +29,10 @@
           </ul>
         </div>
         <div class="nav-right">
-          <input type="text" placeholder="搜尋結果" />
+          <div class="searchbox">
+            <img src="static/search-icon.png" alt="search-icon" />
+            <input type="text" placeholder="搜尋結果" />
+          </div>
           <select class="grey-btn" name="language" id="language">
             <option value="zh-tw">中文 - 繁體</option>
             <option value="en-us">English - US</option>
@@ -39,374 +45,372 @@
         </div>
       </nav>
     </header>
-    <section class="wrapper">
-      <main>
-        <div class="banner grey-background">
-          <div class="banner-info width">
-            <div class="banner-info-left">
-              本頁面由 Rick Li 李奇軒臨摹
-              <a href="https://developers.google.com/?hl=zh-tw"
-                >Google Developers</a
-              >
-              學習而成
-            </div>
-            <div class="banner-info-right">
-              <a class="white-btn github" href="https://github.com/nauish">
-                My GitHub
-              </a>
-            </div>
+    <main>
+      <div class="banner grey-background">
+        <div class="banner-info width">
+          <div class="banner-info-left">
+            本頁面由 Rick Li 李奇軒臨摹
+            <a href="https://developers.google.com/?hl=zh-tw"
+              >Google Developers</a
+            >
+            學習而成
+          </div>
+          <div class="banner-info-right">
+            <a class="white-btn github" href="https://github.com/nauish">
+              My GitHub
+            </a>
           </div>
         </div>
-        <div class="hero-container width">
-          <div class="hero-left">
-            <h1>哈囉世界<br />我是Rick</h1>
-            <p class="hero-left-description">永遠都不會放棄</p>
-          </div>
-          <div class="hero-right">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <p class="hero-btn-list">我學過或正在學的課程：</p>
-            <div class="btn-list">
-              <a
-                href="https://cs50.harvard.edu/x/2023/"
-                target="_blank"
-                class="black-solid-btn"
-                >CS50x</a
-              >
-              <a
-                href="https://cs50.harvard.edu/python/2022/"
-                target="_blank"
-                class="black-solid-btn"
-                >CS50P</a
-              >
-              <a
-                href="https://www.theodinproject.com/"
-                target="_blank"
-                class="black-solid-btn"
-                >The Odin Project</a
-              >
-              <a
-                href="https://school.appworks.tw/"
-                target="_blank"
-                class="black-solid-btn"
-                >AppWorks School</a
-              >
-            </div>
+      </div>
+      <div class="hero-container width">
+        <div class="hero-left">
+          <h1>哈囉世界<br />我是Rick</h1>
+          <p class="hero-left-description">永遠都不會放棄</p>
+        </div>
+        <div class="hero-right">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p class="hero-btn-list">我學過或正在學的課程：</p>
+          <div class="btn-list">
+            <a
+              href="https://cs50.harvard.edu/x/2023/"
+              target="_blank"
+              class="black-solid-btn"
+              >CS50x</a
+            >
+            <a
+              href="https://cs50.harvard.edu/python/2022/"
+              target="_blank"
+              class="black-solid-btn"
+              >CS50P</a
+            >
+            <a
+              href="https://www.theodinproject.com/"
+              target="_blank"
+              class="black-solid-btn"
+              >The Odin Project</a
+            >
+            <a
+              href="https://school.appworks.tw/"
+              target="_blank"
+              class="black-solid-btn"
+              >AppWorks School</a
+            >
           </div>
         </div>
-        <div class="grey-background landing-social">
-          <div class="profile-upper width">
-            <span class="profile">依據Rick的興趣：</span>
-            <div>
-              <button class="grey-border">美食</button>
-              <button class="grey-border">科技</button>
-              <button class="grey-border">健身</button>
-              <button class="grey-border">電影</button>
-              <button class="grey-border">英文</button>
-            </div>
-          </div>
-          <div class="flex-column width">
-            <div class="grid-4">
-              <div class="article-item grey-border">
-                <p class="article-catogory">Foodie</p>
-                <h3><a href="">很愛吃！</a></h3>
-                <p class="article-desciption">
-                  我喜歡義式料理、日本料理、韓式料理、越南料理，如果有好吃的餐廳歡迎跟我說：
-                </p>
-                <div class="aritcle-icon">
-                  <img src="" alt="" />
-                </div>
-              </div>
-              <div class="article-item grey-border">
-                <p class="article-catogory">Technology</p>
-                <h3><a href="">科技宅</a></h3>
-                <p class="article-desciption">
-                  從小就很喜歡坐在電腦前面折騰，也喜歡閱讀電腦、手機及新科技產品的進步。
-                </p>
-                <div class="aritcle-icon">
-                  <img src="" alt="" />
-                </div>
-              </div>
-              <div class="article-item grey-border">
-                <p class="article-catogory">Weight-lifting</p>
-                <h3><a href="">健身有助於頭腦強壯，避免變胖</a></h3>
-                <p class="article-desciption">
-                  我小時候很胖，一直到大學畢業才逐漸瘦下來，但最近因為專心學習程式設計運動量比較少😂😂。
-                </p>
-                <div class="aritcle-icon">
-                  <img src="" alt="" />
-                </div>
-              </div>
-              <div class="article-item grey-border">
-                <p class="article-catogory">Movie & English</p>
-                <h3><a href="">電影</a></h3>
-                <p class="article-desciption">
-                  我看過許多電影，大學時曾經有想把 IMDB 上面前 250
-                  名的電影都看完一輪，目前剩下不到 100 部。
-                </p>
-                <div class="aritcle-icon">
-                  <img src="" alt="" />
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="grey-background landing-social">
+        <div class="profile-upper width">
+          <span class="profile">依據Rick的興趣：</span>
+          <div>
+            <button class="grey-border">美食</button>
+            <button class="grey-border">科技</button>
+            <button class="grey-border">健身</button>
+            <button class="grey-border">電影</button>
+            <button class="grey-border">英文</button>
           </div>
         </div>
-        <div class="flex-column-center width">
-          <h2 class="product-landing-title">精選產品</h2>
+        <div class="flex-column width">
           <div class="grid-4">
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Android</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            <div class="article-item grey-border">
+              <p class="article-catogory">Foodie</p>
+              <h3><a href="">很愛吃！</a></h3>
+              <p class="article-desciption">
+                我喜歡義式料理、日本料理、韓式料理、越南料理，如果有好吃的餐廳歡迎跟我說：
               </p>
+              <div class="aritcle-icon">
+                <img src="" alt="" />
+              </div>
             </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Cloud</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            <div class="article-item grey-border">
+              <p class="article-catogory">Technology</p>
+              <h3><a href="">科技宅</a></h3>
+              <p class="article-desciption">
+                從小就很喜歡坐在電腦前面折騰，也喜歡閱讀電腦、手機及新科技產品的進步。
               </p>
+              <div class="aritcle-icon">
+                <img src="" alt="" />
+              </div>
             </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">TensorFlow</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            <div class="article-item grey-border">
+              <p class="article-catogory">Weight-lifting</p>
+              <h3><a href="">健身有助於頭腦強壯，避免變胖</a></h3>
+              <p class="article-desciption">
+                我小時候很胖，一直到大學畢業才逐漸瘦下來，但最近因為專心學習程式設計運動量比較少😂😂。
               </p>
+              <div class="aritcle-icon">
+                <img src="" alt="" />
+              </div>
             </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Chrome</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            <div class="article-item grey-border">
+              <p class="article-catogory">Movie & English</p>
+              <h3><a href="">電影</a></h3>
+              <p class="article-desciption">
+                我看過許多電影，大學時曾經有想把 IMDB 上面前 250
+                名的電影都看完一輪，目前剩下不到 100 部。
               </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Play</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Firebase</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Flutter</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Ads</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Ads</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Ads</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Ads</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-            <div class="flex-column-center grey-border">
-              <img class="product-icon" src="" alt="" />
-              <h3 class="product-name">Google Ads</h3>
-              <p class="product-description">
-                現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
-              </p>
-            </div>
-          </div>
-          <a class="blue-btn" href="">查看所有開發人員產品</a>
-        </div>
-        <div class="landing-social width">
-          <div class="hero-action-item grey-border padding-24">
-            <div class="align-self">
-              <img
-                src="https://developers.google.com/static/focus/images/optimizing-large-screen.png?hl=zh-tw"
-                alt="android-emulator"
-              />
-            </div>
-            <div class="news-left align-self flex-left">
-              <p class="news-tag">熱門新聞</p>
-              <h2 class="news-title">Google Play 遊戲電腦版支援 Windows</h2>
-              <p>
-                透過 Play 遊戲服務第 2 版 (PGS)
-                功能，在行動裝置和網站上提供順暢的遊戲體驗。
-              </p>
+              <div class="aritcle-icon">
+                <img src="" alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </main>
-      <section class="grey-background">
-        <div class="hero-action-item width">
-          <div class="aside-left">
-            <img
-              src="https://developers.google.com/static/focus/images/giraffe_856.png?hl=zh-tw"
-              alt="Android Studio Giraffe"
-            />
-          </div>
-          <div class="aside-right align-self">
-            <p class="aside-tag">Android 新功能</p>
-            <h2>Android Studio Giraffe 現已穩定</h2>
-            <p>包括即時編輯、Compose 動畫預覽、全新的裝置探索工具等更新。</p>
-            <a href class="blue-btn">立即下載</a>
-          </div>
-        </div>
-      </section>
-      <section class="hero-action-container width">
-        <div class="hero-action-item">
-          <div class="action-left">
-            <img
-              src="https://developers.google.com/static/homepage-assets/images/explore-your-interests_856.jpg?hl=zh-tw"
-              alt=""
-            />
-          </div>
-          <div class="action-right align-self">
-            <h3>尋找活動</h3>
-            <p>透過線上和現場開發人員活動增進知識。</p>
-            <a class="white-btn" href="">查看事件</a>
-          </div>
-        </div>
-        <div class="hero-action-item">
-          <div class="action-left">
-            <img
-              src="https://developers.google.com/static/homepage-assets/images/technical-skills_856.jpg?hl=zh-tw"
-              alt=""
-            />
-          </div>
-          <div class="action-right align-self flex-left">
-            <h3>提升技術能力</h3>
-            <p>透過線上和現場開發人員活動增進知識。</p>
-            <a class="white-btn" href="">查看事件</a>
-          </div>
-        </div>
-        <div class="hero-action-item">
-          <div class="action-left">
-            <img
-              src="https://developers.google.com/static/homepage-assets/images/find-community_856.png?hl=zh-tw"
-              alt=""
-            />
-          </div>
-          <div class="action-right align-self">
-            <h3>加入社群</h3>
-            <p>透過線上和現場開發人員活動增進知識。</p>
-            <a class="white-btn" href="">查看事件</a>
-          </div>
-        </div>
-      </section>
-      <section class="flex-column-center landing-social width">
-        <h2>追蹤 Rick, an Aspiring Developer</h2>
-        <div class="landing-social-container grid-4">
-          <div class="landing-social-item grey-border">
-            <h3>YouTube</h3>
-            <p>歡迎訂閱 Rick 的 YouTube 頻道，雖然我幾乎不會更新資料。</p>
-            <a href="" class="white-btn">瞭解詳情</a>
-          </div>
-          <div class="landing-social-item grey-border">
-            <h3>Instagram</h3>
-            <p>
-              歡迎跟隨我的
-              Instagram，不過我不算在上面很活躍，只有偶爾吃東西的限時動態。
+      </div>
+      <div class="flex-column-center width">
+        <h2 class="product-landing-title">精選產品</h2>
+        <div class="grid-4">
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Android</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
             </p>
-            <a href="" class="white-btn">瞭解詳情</a>
           </div>
-          <div class="landing-social-item grey-border">
-            <h3>LinkedIn</h3>
-            <p>離職以後就比較少使用LinkedIn，歡迎大家跟我 Connect !</p>
-            <a href="" class="white-btn">瞭解詳情</a>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Cloud</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
           </div>
-          <div class="landing-social-item grey-border">
-            <h3>GitHub</h3>
-            <p>大家可以來我的 GitHub 看我的 Commits 以及 Contributions~</p>
-            <a href="" class="white-btn">瞭解詳情</a>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">TensorFlow</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Chrome</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Play</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Firebase</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Flutter</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Ads</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Ads</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Ads</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Ads</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
+          </div>
+          <div class="flex-column-center grey-border">
+            <img class="product-icon" src="" alt="" />
+            <h3 class="product-name">Google Ads</h3>
+            <p class="product-description">
+              現代風工具可協助你打造大家在所有 Android 裝置上都會喜愛的體驗。
+            </p>
           </div>
         </div>
-      </section>
-      <footer>
-        <nav class="footer-nav">
-          <div class="nav-upper padding-24">
-            <div class="nav-upper-left">
-              <h3>論壇</h3>
-              <ul>
-                <li><a href="">網誌</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">YouTube</a></li>
-              </ul>
-            </div>
-            <div class="nav-upper-mid">
-              <h3>計畫</h3>
-              <ul>
-                <li><a href="">網誌</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">YouTube</a></li>
-              </ul>
-            </div>
-            <div class="nav-upper-right">
-              <h3>開發人員控制台</h3>
-              <ul>
-                <li><a href="">網誌</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="">YouTube</a></li>
-              </ul>
-            </div>
+        <a class="blue-btn" href="">查看所有開發人員產品</a>
+      </div>
+      <div class="landing-social width">
+        <div class="hero-action-item grey-border padding-24">
+          <div class="align-self">
+            <img
+              src="https://developers.google.com/static/focus/images/optimizing-large-screen.png?hl=zh-tw"
+              alt="android-emulator"
+            />
           </div>
-          <div class="nav-mid padding-24">
-            <a href="">Android</a>
-            <a href="">Chrome</a>
-            <a href="">Firebase</a>
-            <a href="">Google Cloud Platform</a>
-            <a href="">所有產品</a>
+          <div class="news-left align-self flex-left">
+            <p class="news-tag">熱門新聞</p>
+            <h2 class="news-title">Google Play 遊戲電腦版支援 Windows</h2>
+            <p>
+              透過 Play 遊戲服務第 2 版 (PGS)
+              功能，在行動裝置和網站上提供順暢的遊戲體驗。
+            </p>
           </div>
-          <div class="nav-bottom padding-24">
-            <div class="nav-btm-let">
-              <a href="">條款</a>
-              <a href="">隱私權</a>
-            </div>
-            <div class="nav-btm-right">
-              <span>訂閱 Google for Developers 電子報</span>
-              <a class="blue-btn">立即下載</a>
-              <select class="grey-btn" name="language" id="language">
-                <option value="zh-tw">中文 - 繁體</option>
-                <option value="en-us">English - US</option>
-              </select>
-            </div>
-          </div>
-        </nav>
-      </footer>
+        </div>
+      </div>
+    </main>
+    <section class="grey-background">
+      <div class="hero-action-item width">
+        <div class="aside-left">
+          <img
+            src="https://developers.google.com/static/focus/images/giraffe_856.png?hl=zh-tw"
+            alt="Android Studio Giraffe"
+          />
+        </div>
+        <div class="aside-right align-self">
+          <p class="aside-tag">Android 新功能</p>
+          <h2>Android Studio Giraffe 現已穩定</h2>
+          <p>包括即時編輯、Compose 動畫預覽、全新的裝置探索工具等更新。</p>
+          <a href class="blue-btn">立即下載</a>
+        </div>
+      </div>
     </section>
+    <section class="hero-action-container width">
+      <div class="hero-action-item">
+        <div class="action-left">
+          <img
+            src="https://developers.google.com/static/homepage-assets/images/explore-your-interests_856.jpg?hl=zh-tw"
+            alt=""
+          />
+        </div>
+        <div class="action-right align-self">
+          <h3>尋找活動</h3>
+          <p>透過線上和現場開發人員活動增進知識。</p>
+          <a class="white-btn" href="">查看事件</a>
+        </div>
+      </div>
+      <div class="hero-action-item">
+        <div class="action-left">
+          <img
+            src="https://developers.google.com/static/homepage-assets/images/technical-skills_856.jpg?hl=zh-tw"
+            alt=""
+          />
+        </div>
+        <div class="action-right align-self flex-left">
+          <h3>提升技術能力</h3>
+          <p>透過線上和現場開發人員活動增進知識。</p>
+          <a class="white-btn" href="">查看事件</a>
+        </div>
+      </div>
+      <div class="hero-action-item">
+        <div class="action-left">
+          <img
+            src="https://developers.google.com/static/homepage-assets/images/find-community_856.png?hl=zh-tw"
+            alt=""
+          />
+        </div>
+        <div class="action-right align-self">
+          <h3>加入社群</h3>
+          <p>透過線上和現場開發人員活動增進知識。</p>
+          <a class="white-btn" href="">查看事件</a>
+        </div>
+      </div>
+    </section>
+    <section class="flex-column-center landing-social width">
+      <h2>追蹤 Rick, an Aspiring Developer</h2>
+      <div class="landing-social-container grid-4">
+        <div class="landing-social-item grey-border">
+          <h3>YouTube</h3>
+          <p>歡迎訂閱 Rick 的 YouTube 頻道，雖然我幾乎不會更新資料。</p>
+          <a href="" class="white-btn">瞭解詳情</a>
+        </div>
+        <div class="landing-social-item grey-border">
+          <h3>Instagram</h3>
+          <p>
+            歡迎跟隨我的
+            Instagram，不過我不算在上面很活躍，只有偶爾吃東西的限時動態。
+          </p>
+          <a href="" class="white-btn">瞭解詳情</a>
+        </div>
+        <div class="landing-social-item grey-border">
+          <h3>LinkedIn</h3>
+          <p>離職以後就比較少使用LinkedIn，歡迎大家跟我 Connect !</p>
+          <a href="" class="white-btn">瞭解詳情</a>
+        </div>
+        <div class="landing-social-item grey-border">
+          <h3>GitHub</h3>
+          <p>大家可以來我的 GitHub 看我的 Commits 以及 Contributions~</p>
+          <a href="" class="white-btn">瞭解詳情</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav class="footer-nav">
+        <div class="nav-upper padding-24">
+          <div class="nav-upper-left">
+            <h3>論壇</h3>
+            <ul>
+              <li><a href="">網誌</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="nav-upper-mid">
+            <h3>計畫</h3>
+            <ul>
+              <li><a href="">網誌</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="nav-upper-right">
+            <h3>開發人員控制台</h3>
+            <ul>
+              <li><a href="">網誌</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-mid padding-24">
+          <a href="">Android</a>
+          <a href="">Chrome</a>
+          <a href="">Firebase</a>
+          <a href="">Google Cloud Platform</a>
+          <a href="">所有產品</a>
+        </div>
+        <div class="nav-bottom padding-24">
+          <div class="nav-btm-let">
+            <a href="">條款</a>
+            <a href="">隱私權</a>
+          </div>
+          <div class="nav-btm-right">
+            <span>訂閱 Google for Developers 電子報</span>
+            <a class="blue-btn">立即下載</a>
+            <select class="grey-btn" name="language" id="language">
+              <option value="zh-tw">中文 - 繁體</option>
+              <option value="en-us">English - US</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>

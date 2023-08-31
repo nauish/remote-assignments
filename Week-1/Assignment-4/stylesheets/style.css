@@ -1,4 +1,4 @@
-html {
+body {
   box-sizing: border-box;
 }
 
@@ -14,26 +14,35 @@ body {
   justify-content: space-between;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
-  padding: 0 16px;
+  padding: 0 16px 0 24px;
   height: 48px;
   font-size: 14px;
   color: #5f6368;
   position: fixed;
-  width: 99%;
+  width: 100%;
+  box-sizing: border-box;
   top: 0;
 }
 
-.nav-right input {
-  margin: 6px;
+.nav-left {
+  display: flex;
+}
+
+.nav-left img {
+  padding: 6px;
+}
+
+.searchbox,
+input {
+  display: flex;
   background-color: rgb(232, 234, 237);
   border: 0;
   border-radius: 4px 4px;
   font-size: 16px;
 }
 
-.nav-right select {
-  margin: 6px;
-  font-size: 14px;
+.searchbox img {
+  padding: 10px;
 }
 
 .nav-menu {
@@ -43,13 +52,16 @@ body {
 
 .nav-right {
   display: flex;
+  justify-content: flex-end;
+  padding: 6px;
+  gap: 6px;
 }
 
 li {
   list-style-type: none;
 }
 
-.wrapper {
+main {
   margin-top: 48.8px;
 }
 
@@ -148,11 +160,6 @@ a.grey-border:first-child {
   color: rgb(26, 115, 232);
   padding: 6px 24px;
   margin: 4px;
-}
-
-.profile-icon {
-  border-radius: 50% 50%;
-  height: auto;
 }
 
 .black-solid-btn:first-child {
@@ -331,6 +338,14 @@ img {
 
 .flex-left {
   order: -1;
+}
+
+.grey-btn {
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px 8px;
+  font-size: 14px;
+  background-color: #ffffff;
+  padding: 8px 16px;
 }
 
 @media screen and (max-width: 1440px) {
