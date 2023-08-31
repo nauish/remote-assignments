@@ -317,6 +317,7 @@ select:hover {
 .nav-bottom {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   border-top: 1px solid rgb(218, 220, 224);
 }
 
@@ -486,4 +487,8 @@ img {
   .menu {
     display: block;
   }
+}
+
+button.blue-btn {
+  border: none;
 }
