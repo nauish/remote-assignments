@@ -47,6 +47,7 @@ input {
 
 .language-selector {
   display: flex;
+  max-width: 150px;
   border: 1px solid lightgray;
   border-radius: 4px 4px;
 }
@@ -410,6 +411,15 @@ img {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .searchbox input {
+    display: none;
+  }
+  .searchbox {
+    background-color: white;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .grid-4,
   .hero-action-item {
@@ -419,6 +429,9 @@ img {
     order: 0;
   }
   #hide-until-narrow {
+    display: none;
+  }
+  .language-selector {
     display: none;
   }
 }
