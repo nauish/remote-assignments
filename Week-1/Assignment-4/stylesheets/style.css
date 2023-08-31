@@ -188,6 +188,10 @@ a {
   text-decoration: none;
 }
 
+.article-item a:visited {
+  color: rgb(26, 115, 232);
+}
+
 .article-catogory {
   font-weight: bold;
   font-size: 6px;
