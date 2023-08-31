@@ -238,10 +238,6 @@ a {
   text-align: center;
 }
 
-.article-item {
-  margin-bottom: 50px;
-}
-
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -312,4 +308,8 @@ img {
 
 .padding-24 {
   padding: 24px;
+}
+
+.profile-carousel {
+  padding: 40px 0;
 }
