@@ -108,6 +108,11 @@ iframe {
   font-weight: 700;
 }
 
+.btn-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 h2 {
   font-size: 48px;
   font-family: "Open Sans", sans-serif;
@@ -201,9 +206,20 @@ a {
   margin: 24px 0;
 }
 
+.white-btn {
+  color: #1a73e8;
+  font-size: 14px;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px 8px;
+  border-radius: 4px 4px;
+  padding: 8px 20px;
+  margin: 24px 0;
+}
+
 .featured,
 .news-item {
   display: flex;
+  justify-self: center;
 }
 
 @media screen and (max-width: 582px) {
@@ -296,10 +312,6 @@ a {
   align-items: flex-start;
 }
 
-.news-right {
-  align-self: center;
-}
-
 img {
   height: auto;
   max-width: 100%;
@@ -312,4 +324,22 @@ img {
 
 .profile-carousel {
   padding: 40px 0;
+}
+
+.hero-action-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.align-self {
+  align-self: center;
+}
+
+.action-right h3 {
+  font-size: 40px;
+}
+
+.action-right p {
+  font-size: 18px;
 }
