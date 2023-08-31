@@ -238,6 +238,21 @@ a {
   margin: 24px 0;
 }
 
+button.grey-border:hover,
+.language-selector:hover,
+select:hover {
+  background-color: rgb(248, 249, 250);
+}
+
+.blue-btn:hover {
+  background-color: rgb(23, 101, 204);
+}
+
+.white-btn:hover,
+.black-solid-btn:hover {
+  background-color: rgb(232, 240, 254);
+}
+
 .news-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -392,4 +407,8 @@ img {
 .product-icon {
   height: 64px;
   padding: 24px;
+}
+
+.grid-4 .flex-column-center:hover {
+  text-decoration: underline rgb(26, 115, 232);
 }
