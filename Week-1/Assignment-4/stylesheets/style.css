@@ -41,13 +41,31 @@ input {
   font-size: 16px;
 }
 
-.searchbox img {
+.language-selector {
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 4px 4px;
+}
+
+select {
+  border: none;
+}
+
+.searchbox img,
+.language-selector img {
   padding: 10px;
 }
 
 .nav-menu {
   display: flex;
   gap: 20px;
+}
+
+.nav-left a {
+  margin: auto;
+  font-weight: 600;
+  font-size: large;
+  color: #5f6368;
 }
 
 .nav-right {
@@ -239,6 +257,10 @@ a {
   margin: 24px auto 12px auto;
 }
 
+.profile-icon {
+  border-radius: 50%;
+}
+
 .profile {
   margin: 36px 8px 16px;
 }
@@ -276,16 +298,13 @@ a {
 }
 
 .nav-bottom {
+  display: flex;
+  justify-content: space-between;
   border-top: 1px solid rgb(218, 220, 224);
 }
 
 .nav-upper ul {
   padding-left: 0;
-}
-
-.nav-bottom {
-  display: flex;
-  justify-content: space-between;
 }
 
 .landing-social {
