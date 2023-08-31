@@ -278,6 +278,11 @@ a {
   justify-content: space-between;
 }
 
+.landing-social {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .landing-social-item {
   display: flex;
   flex-direction: column;
