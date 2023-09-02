@@ -6,7 +6,7 @@ Sorry for my juvenile humor. Most links in this project and the landing video ar
 
 ## [Click Here to Check the Page](https://nauish.github.io/remote-assignments/Week-1/Assignment-4/)
 
-I use **a lot of** CSS flexbox and CSS grid to solve this challenge. My CSS file is very messy for trying to make the grid and navbar behave just like the target page. I challenged myself to use grid and flexbox properties when posible to create responsive design, and only use media quries if needed.
+I use **a lot of** CSS flexbox and CSS grid to solve this challenge. My CSS file is very messy for trying to make the grid and navbar behave just like the target page. I challenged myself to use grid and flexbox properties when possible to create responsive design, and only use media queries if needed.
 
 ## Instructions Given
 
