@@ -9,10 +9,25 @@ function countAandB(input) {
   }
   return abCount;
 }
+
 function toNumber(input) {
   // your code here
-  // I created a match object to map the letters to numbers to practice getting key values using match().
-  // I also tried using ASCII and forEach() method in the toNumberAscii function to get the same result.
+  const numberArr = [];
+  input.forEach((letter) => {
+    numberArr.push(letter.charCodeAt(0) - 96);
+  });
+  return numberArr;
+}
+
+let input1 = ["a", "b", "c", "a", "c", "a", "c"];
+console.log(countAandB(input1)); // should print 4 (3 ‘a’ letters and 1 ‘b’ letter)
+console.log(toNumber(input1)); // should print [1, 2, 3, 1, 3, 1, 3]
+let input2 = ["e", "d", "c", "d", "e"];
+console.log(countAandB(input2)); // should print 0
+console.log(toNumber(input2)); // should print [5, 4, 3, 4, 5]
+
+function toNumberObj(input) {
+  // I also created a match object to map the letters to numbers to practice getting key values using match().
   const match = {
     a: 1,
     b: 2,
@@ -47,21 +62,3 @@ function toNumber(input) {
   }
   return numberArr;
 }
-
-function toNumberAscii(input) {
-  const numberArr = [];
-  input.forEach((letter) => {
-    numberArr.push(letter.charCodeAt(0) - 96);
-  });
-  return numberArr;
-}
-
-let input1 = ["a", "b", "c", "a", "c", "a", "c"];
-console.log(countAandB(input1)); // should print 4 (3 ‘a’ letters and 1 ‘b’ letter)
-console.log(toNumber(input1)); // should print [1, 2, 3, 1, 3, 1, 3]
-let input2 = ["e", "d", "c", "d", "e"];
-console.log(countAandB(input2)); // should print 0
-console.log(toNumber(input2)); // should print [5, 4, 3, 4, 5]
-
-// console.log(toNumberAscii(input1));
-// console.log(toNumberAscii(input2));
