@@ -65,3 +65,11 @@ nav {
   padding: 10px;
   margin-top: 20px;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
