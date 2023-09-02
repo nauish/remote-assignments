@@ -10,11 +10,11 @@ I then create a loop that will add 1 to the abCount whenever the an item in the 
 
 Finally I return the value of abCount.
 
-### toNumber(input) and toNumberAscii(input)
+### toNumber(input) and toNumberObj(input)
 
-I created a match object to map the letters to numbers. Then I create a loop that adds the value of letters found in the object and push it to an empty array.
+I originally created a match object to map the letters to numbers. Then I create a loop that adds the value of letters found in the object and push it to an empty array.
 
-I was not satisfied with the vorbosity of my previous attempt. so I also tried using ASCII and forEach() method in the toNumberAscii function to get the same result. This solution is much more concise but require looking up the ASCII table to complete.
+I was not satisfied with the vorbosity of my previous attempt. so I also tried using ASCII and forEach() method in the toNumberAscii function to get the same result. This solution is much more concise but require looking up the ASCII table.
 
 ## Instructions Given
 
