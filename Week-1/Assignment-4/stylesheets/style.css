@@ -436,8 +436,9 @@ img {
   align-self: center;
 }
 
-.menu img {
-  height: 20px;
+.menu .menu-btn {
+  padding-top: 10px;
+  height: 18px;
   width: 26px;
 }
 
