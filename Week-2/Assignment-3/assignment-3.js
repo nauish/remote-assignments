@@ -16,8 +16,18 @@ let input1 = ["a", "b", "c", "a", "c", "a", "x"];
 console.log(count(input1));
 // should print {a:3, b:1, c:2, x:1}
 
-function groupByKey(input) {
+function groupByKey(input = Array) {
   // your code here
+  let countObj = {};
+  for (let i = 0; i < input.length; i++) {
+    // Store the key and the initial value if not met
+    if (input[i].key in countObj == false) {
+      countObj[input[i].key] = input[i].value;
+    } else {
+      countObj[input[i].key] += input[i].value;
+    }
+  }
+  return countObj;
 }
 
 let input2 = [
