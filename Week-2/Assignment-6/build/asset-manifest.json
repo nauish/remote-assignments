@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/static/css/main.3691a81f.css",
+    "main.js": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/static/js/main.08aec504.js",
+    "static/js/787.dad57396.chunk.js": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/static/js/787.dad57396.chunk.js",
+    "index.html": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/index.html",
+    "main.3691a81f.css.map": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/static/css/main.3691a81f.css.map",
+    "main.08aec504.js.map": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/static/js/main.08aec504.js.map",
+    "787.dad57396.chunk.js.map": "/nauish/remote-assignments/tree/main/Week-2/Assignment-6/build/static/js/787.dad57396.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3691a81f.css",
+    "static/js/main.08aec504.js"
+  ]
+}
