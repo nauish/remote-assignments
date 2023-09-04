@@ -18,4 +18,14 @@ Hello World!
 
 ## Week 2
 
-To be added
+這周主要學習 JavaScript syntax, function, loop, array, object,
+
+- Assignment 1: Function and Array **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-1)**
+- Assignment 2: Function, Array, and Object
+  **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-2)**
+- Assignment 3: Data Manipulation
+  **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-1/Assignment-3)**
+- Assignment 4: HTML DOM and Event Handling
+  **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-4) / [Page](https://nauish.github.io/remote-assignments/Week-2/Assignment-4/)**
+- Assignment 5: Algorithm Practice (Advanced Optional) **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-5)**
+- Assignment 6: HTML DOM and Event Handling with Front-End framework or library (Advanced Optional) **Under construction...**
