@@ -1,5 +1,5 @@
 const Main = () => (
-  <main>
+  <main className="main">
     <WelcomeMessage msg={"Hey"} />
     <Section />
   </main>

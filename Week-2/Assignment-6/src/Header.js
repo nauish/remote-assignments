@@ -1,6 +1,6 @@
 const Header = () => (
   <header>
-    <nav>
+    <nav className="nav">
       <Logo />
       <div>
         <ul>
