@@ -1,4 +1,4 @@
-const Main = () => (
+const Mains = () => (
   <main className="main">
     <WelcomeMessage msg={"Hey"} />
     <Section />
@@ -30,4 +30,4 @@ const CallToAction = () => {
   return <button className="call-to-action">Call to Action</button>;
 };
 
-export default Main;
+export default Mains;
