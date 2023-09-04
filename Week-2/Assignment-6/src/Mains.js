@@ -1,11 +1,22 @@
-const Mains = () => (
-  <main className="main">
-    <WelcomeMessage msg={"Hey"} />
-    <Section />
-  </main>
-);
+import React, { useState } from "react";
 
-const WelcomeMessage = ({ msg }) => <div className="main-upper">{msg}</div>;
+const Mains = () => {
+  const [message, setMessage] = useState("Welcome Message");
+
+  const handleClick = () => {
+    setMessage("Have a good day!");
+  };
+
+  return (
+    <main className="main">
+      <div className="main-upper" onClick={handleClick}>
+        {message}
+      </div>
+      <Section />
+      <HiddenSection isHidden="false" />
+    </main>
+  );
+};
 
 const Section = () => {
   return (
@@ -17,17 +28,34 @@ const Section = () => {
         <ContentBox content="Content Box 3" />
         <ContentBox content="Content Box 4" />
       </div>
-      <CallToAction />
+    </div>
+  );
+};
+
+const HiddenSection = () => {
+  const [hiddenStatus, setHideenStatus] = useState("content-box-container");
+
+  const handleClick = () => {
+    setHideenStatus("hidden-container");
+  };
+
+  return (
+    <div className="main-lower">
+      <button className="call-to-action" onClick={handleClick}>
+        Call to Action
+      </button>
+      <div className={hiddenStatus}>
+        <ContentBox content="Content Box 5" />
+        <ContentBox content="Content Box 6" />
+        <ContentBox content="Content Box 7" />
+        <ContentBox content="Content Box 8" />
+      </div>
     </div>
   );
 };
 
 const ContentBox = ({ content }) => {
   return <div className="content-box">{content}</div>;
-};
-
-const CallToAction = () => {
-  return <button className="call-to-action">Call to Action</button>;
 };
 
 export default Mains;

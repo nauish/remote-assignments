@@ -10,7 +10,8 @@
   background-color: #cfdcec;
   align-items: center;
   height: 25vh;
-  font-size: 50px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .main-lower {
@@ -58,7 +59,7 @@ nav {
   background-color: #e0edfd;
   border: 0;
   padding: 10px;
-  margin: 20px;
+  margin: 24px;
 }
 
 a {
