@@ -13,7 +13,7 @@ const Mains = () => {
         {message}
       </div>
       <Section />
-      <HiddenSection isHidden="false" />
+      <HiddenSection />
     </main>
   );
 };
@@ -33,10 +33,10 @@ const Section = () => {
 };
 
 const HiddenSection = () => {
-  const [hiddenStatus, setHideenStatus] = useState("content-box-container");
+  const [hiddenStatus, setHideenStatus] = useState("hidden-container");
 
   const handleClick = () => {
-    setHideenStatus("hidden-container");
+    setHideenStatus("content-box-container");
   };
 
   return (
