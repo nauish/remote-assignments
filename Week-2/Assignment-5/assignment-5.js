@@ -16,7 +16,7 @@ function binarySearchPosition(numbers, target) {
       right = currentMiddle - 1;
       // Else if the target is larger than the curret middle,
     } else if (target > numbers[currentMiddle]) {
-      // it might be between curret middle position + 1 and the rightmost number
+      // it might be between current middle position + 1 and the rightmost number
       left = currentMiddle + 1;
     }
   }
