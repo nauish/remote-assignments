@@ -3,9 +3,9 @@ function binarySearchPosition(numbers, target) {
   // Store the leftmost and rightmost position
   let left = 0;
   let right = numbers.length - 1;
-  // Calculate current middle value
 
   while (left <= right) {
+    // Calculate current middle value, and convert it to an interger
     let currentMiddle = Math.floor((left + right) / 2);
     // If the target is equal to the curret middle, return position
     if (target === numbers[currentMiddle]) {
@@ -20,7 +20,7 @@ function binarySearchPosition(numbers, target) {
       left = currentMiddle + 1;
     }
   }
-  // If the no number left, return false
+  // If the no number left, return -1
   return -1;
 }
 console.log(binarySearchPosition([1, 2, 5, 6, 7], 1)); // should print 0
