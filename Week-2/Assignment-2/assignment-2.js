@@ -7,8 +7,14 @@ function avg(data) {
   return dataSum / data.size;
 }
 
+function avgReduce(data) {
+  return (
+    data.products.reduce((sum, product) => sum + product.price, 0) / data.size
+  );
+}
+
 console.log(
-  avg({
+  avgReduce({
     size: 3,
     products: [
       {
