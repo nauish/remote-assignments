@@ -33,10 +33,10 @@ const Section = () => {
 };
 
 const HiddenSection = () => {
-  const [hiddenStatus, setHideenStatus] = useState("hidden-container");
+  const [hiddenStatus, setHiddenStatus] = useState("hidden-container");
 
   const handleClick = () => {
-    setHideenStatus("content-box-container");
+    setHiddenStatus("content-box-container");
   };
 
   return (
