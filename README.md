@@ -24,8 +24,8 @@ Hello World!
 - Assignment 2: Function, Array, and Object
   **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-2)**
 - Assignment 3: Data Manipulation
-  **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-1/Assignment-3)**
+  **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-3)**
 - Assignment 4: HTML DOM and Event Handling
   **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-4) / [Page](https://nauish.github.io/remote-assignments/Week-2/Assignment-4/)**
 - Assignment 5: Algorithm Practice (Advanced Optional) **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-5)**
-- Assignment 6: HTML DOM and Event Handling with Front-End framework or library (Advanced Optional) **Under construction...**
+- Assignment 6: HTML DOM and Event Handling with Front-End framework or library (Advanced Optional) **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-6) [Page](https://nauish.github.io/remote-assignments/Week-2/Assignment-6/build/)**
