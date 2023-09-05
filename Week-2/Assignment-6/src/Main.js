@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Mains = () => {
+const Main = () => {
   const [message, setMessage] = useState("Welcome Message");
 
   const handleClick = () => {
@@ -58,4 +58,4 @@ const ContentBox = ({ content }) => {
   return <div className="content-box">{content}</div>;
 };
 
-export default Mains;
+export default Main;
