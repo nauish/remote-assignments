@@ -12,11 +12,20 @@ function count(input) {
   return countObj;
 }
 
+// Same idea but use reduce method
+function countReduce(input) {
+  return input.reduce((letter, currentCount) => {
+    if (!letter[currentCount]) letter[currentCount] = 0;
+    letter[currentCount] += 1;
+    return letter;
+  }, {});
+}
+
 let input1 = ["a", "b", "c", "a", "c", "a", "x"];
 console.log(count(input1));
 // should print {a:3, b:1, c:2, x:1}
 
-function groupByKey(input = Array) {
+function groupByKey(input) {
   // your code here
   let countObj = {};
   for (let i = 0; i < input.length; i++) {
