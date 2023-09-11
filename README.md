@@ -29,3 +29,10 @@ Hello World!
   **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-4) / [Page](https://nauish.github.io/remote-assignments/Week-2/Assignment-4/)**
 - Assignment 5: Algorithm Practice (Advanced Optional) **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-5)**
 - Assignment 6: HTML DOM and Event Handling with Front-End framework or library (Advanced Optional) **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-2/Assignment-6) [Page](https://nauish.github.io/remote-assignments/Week-2/Assignment-6/build/)**
+
+## Week 3
+
+這周學習 Node.js, Express, AJAX, Fetch API & ES6 Syntax
+
+- Assignment 1-4: Node.js + Express Server
+- Assignment 5: TwoSum **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-3/Assignment-5)**
