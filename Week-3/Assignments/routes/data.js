@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
   if (isFinite(n) && n > 0) {
     res.send(`${((1 + n) * n) / 2}`);
   } else {
-    res.send("Wrong parameter!");
+    res.status(400).send("Wrong parameter!");
   }
 });
 
