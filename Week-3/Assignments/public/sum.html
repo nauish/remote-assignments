@@ -13,13 +13,18 @@
       positive integer.
     </p>
     <div class="sum-form">
-      <input type="number" id="number-input" placeholder="Enter a number" />
+      <input
+        type="number"
+        id="number-input"
+        placeholder="Enter a number"
+        required
+      />
       <button type="submit" onclick="loadSum()">Sum</button>
     </div>
     <div class="result"></div>
 
     <script>
-      // To load the page with the default parameter of 10, to get result 55.
+      // To load the page with the default parameter of 10, to get the result of 55.
       document.addEventListener("DOMContentLoaded", function () {
         loadSum();
       });
