@@ -18,4 +18,6 @@ app.use("/data", dataRoutes); // Assignment 2
 app.use("/myName", myNameRoutes); // Assignment 4
 app.use("/trackName", trackNameRoutes); // Assignment 4
 
+app.all("*", (req, res) => res.status(404).send("404 Page Not Found"));
+
 app.listen(port, () => console.log(`The app is running on port ${port}`));
