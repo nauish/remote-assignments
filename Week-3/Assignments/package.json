@@ -1,7 +1,7 @@
 {
   "name": "remote-assignment-week-3",
   "version": "0.0.1",
-  "description": "This is for creating a simple server",
+  "description": "A simple server for practicing Node.js and Express",
   "main": "app.js",
   "scripts": {
     "test": "nodemon app.js"
@@ -9,6 +9,7 @@
   "author": "Rick Li",
   "license": "MIT",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "express": "^4.18.2"
   }
 }
