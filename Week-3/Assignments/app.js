@@ -4,7 +4,7 @@ const port = 3000;
 
 // Assignment 1
 app.get("/", (request, response) => {
-  response.send("Hello World!");
+  response.send("<h1>Hello, My Server!</h1>");
 });
 
 app.listen(port, () => {
@@ -20,3 +20,6 @@ app.get("/data", (request, response) => {
     response.send("Wrong parameter!");
   }
 });
+
+// Assignment 3
+app.use(express.static("public"));
