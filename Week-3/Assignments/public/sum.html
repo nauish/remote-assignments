@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Triangle Number!</title>
+    <link rel="stylesheet" href="sum.css" />
+  </head>
+  <body>
+    <h1>Triangle Number Calculator</h1>
+    <p>
+      This is a simple calculator for calculating the sum from 1 to any given
+      positive integer.
+    </p>
+    <div class="sum-form">
+      <input type="number" id="number-input" placeholder="Enter a number" />
+      <button type="submit" onclick="loadSum()">Sum</button>
+    </div>
+    <div class="result"></div>
+
+    <script>
+      // To load the page with the default parameter of 10, to get result 55.
+      document.addEventListener("DOMContentLoaded", function () {
+        loadSum();
+      });
+
+      function loadSum() {
+        const defaultValue = 10;
+        const number =
+          document.getElementById("number-input").value || defaultValue;
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            document.querySelector(
+              ".result"
+            ).innerHTML = `Sum from 1 to ${number} = ${xhr.responseText}`;
+          }
+        };
+        xhr.open("GET", `data?number=${number}`);
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
