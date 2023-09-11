@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tell me your name!</title>
+  </head>
+  <body>
+    <h1>Hey, stranger!</h1>
+    <!-- Use get since we need to accept query strings from users -->
+    <form action="/trackName" method="get">
+      <label for="name">Please tell me your name:</label>
+      <input type="text" id="name" name="name" required />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
