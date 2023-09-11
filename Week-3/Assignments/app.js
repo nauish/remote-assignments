@@ -1,25 +1,21 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
+
 const app = express();
 const port = 3000;
 
-// Assignment 1
-app.get("/", (request, response) => {
-  response.send("<h1>Hello, My Server!</h1>");
-});
+app.use(cookieParser());
+app.use(express.static("public")); // Static HTML & CSS files for Assignment 3 & 4
 
-app.listen(port, () => {
-  console.log(`The app is running on port ${port}`);
-});
+// Import route modules
+const mainRoutes = require("./routes");
+const dataRoutes = require("./routes/data");
+const myNameRoutes = require("./routes/myName");
+const trackNameRoutes = require("./routes/trackName");
 
-// Assignment 2
-app.get("/data", (request, response) => {
-  const n = +request.query.number;
-  if (isFinite(n) && n > 0) {
-    response.send(`${((1 + n) * n) / 2}`);
-  } else {
-    response.send("Wrong parameter!");
-  }
-});
+app.use(mainRoutes); // Assignment 1
+app.use("/data", dataRoutes); // Assignment 2
+app.use("/myName", myNameRoutes); // Assignment 4
+app.use("/trackName", trackNameRoutes); // Assignment 4
 
-// Assignment 3
-app.use(express.static("public"));
+app.listen(port, () => console.log(`The app is running on port ${port}`));
