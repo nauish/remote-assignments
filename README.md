@@ -34,5 +34,5 @@ Hello World!
 
 這周學習 Node.js, Express, AJAX, Fetch API & ES6 Syntax
 
-- Assignment 1-4: Node.js + Express Server
+- Assignment 1-4: Node.js + Express Server **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-3/Assignments)**
 - Assignment 5: TwoSum **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-3/Assignment-5)**
