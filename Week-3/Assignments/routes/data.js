@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   try {
     const n = +req.query.number;
-    if (isFinite(n) && n > 0) {
+    if (Number.isInteger(n) && n > 0) {
       res.send(`${((1 + n) * n) / 2}`);
     } else {
       res.status(400).send("Wrong parameter!");
