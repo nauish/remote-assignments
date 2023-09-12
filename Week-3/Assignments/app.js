@@ -20,7 +20,6 @@ app.use("/myName", myNameRoutes); // Assignment 4
 app.use("/trackName", trackNameRoutes); // Assignment 4
 
 app.all("*", (req, res) => res.status(404).send("404 Page Not Found")); // 404 handler for undefined routes
-
 app.use(errorHandler); // 500 error handler for generic errors
 
 app.listen(port, () => console.log(`The app is running on port ${port}`));
