@@ -8,7 +8,6 @@ const port = 3000;
 app.use(cookieParser());
 app.use(express.static("public")); // Static HTML & CSS files for Assignment 3 & 4
 
-// Import route modules
 const mainRoutes = require("./routes");
 const dataRoutes = require("./routes/data");
 const myNameRoutes = require("./routes/myName");
