@@ -29,27 +29,17 @@
         loadSum();
       });
 
-      function loadSum() {
+      async function loadSum() {
         const defaultValue = 10;
         const number =
           document.getElementById("number-input").value || defaultValue;
 
         // Fetch API
-        fetch(`data?number=${number}`)
-          .then((response) => {
-            return response.text();
-          })
-          .then((fetchedNumber) => {
-            document.querySelector(
-              ".result"
-            ).innerHTML = `Sum from 1 to ${number} = ${fetchedNumber}`;
-          })
-          .catch(
-            (error) =>
-              (document.querySelector(
-                ".result"
-              ).innerHTML = `Fetch error! ${error}`)
-          );
+        const response = await fetch(`data?number=${number}`);
+        const sum = await response.text();
+        document.querySelector(
+          ".result"
+        ).innerHTML = `Sum from 1 to ${number} = ${sum}`;
 
         /* Old AJAX code
             const xhr = new XMLHttpRequest();
