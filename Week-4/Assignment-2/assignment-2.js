@@ -9,10 +9,40 @@ function ajax(src, callback) {
   xhr.open("GET", src);
   xhr.send();
 }
+
 function render(data) {
   // your code here
-  // document.createElement() and appendChild() methods are preferred.
+  const productList = document.querySelector(".product-list");
+
+  data.forEach((item) => {
+    // document.createElement() and appendChild() methods are preferred.
+    const productItem = document.createElement("div"); // Item container
+    productItem.className = "product-item";
+    productList.appendChild(productItem);
+
+    // Dynamically build out div structure
+    Object.keys(item).forEach((key) => {
+      const div = document.createElement("div");
+      div.className = key;
+
+      if (key === "price") {
+        div.textContent = priceFormatter(item[key]);
+      } else {
+        div.textContent = item[key];
+      }
+      productItem.appendChild(div);
+    });
+  });
 }
+
+function priceFormatter(price) {
+  return new Intl.NumberFormat("zh-TW", {
+    style: "currency",
+    currency: "TWD",
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+
 ajax(
   "https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products",
   function (response) {
