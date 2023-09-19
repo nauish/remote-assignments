@@ -13,10 +13,20 @@ delayedResult(-5, 10, 2000, function (result) {
 
 function delayedResultPromise(n1, n2, delayTime) {
   // your code here
-  return new Promise((resolve, reject) =>
-    setTimeout(() => resolve(n1 + n2), delayTime)
-  );
+  return new Promise((resolve, reject) => {
+    if (
+      Number.isFinite(n1) &&
+      Number.isFinite(n2) &&
+      Number.isFinite(delayTime) &&
+      delayTime >= 0
+    ) {
+      setTimeout(() => resolve(n1 + n2), delayTime);
+    } else {
+      reject(Error("Please only pass in numbers and a non-negative delayTime"));
+    }
+  });
 }
+
 delayedResultPromise(4, 5, 3000).then(console.log);
 // 9 (4+5) will be shown in the console after 3 seconds
 
