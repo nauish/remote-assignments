@@ -8,9 +8,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
-const registerRoutes = require("./routes/register.js");
+const authRoutes = require("./routes/auth.js");
 
-app.use("/", registerRoutes);
+app.use("/", authRoutes);
 
 app.all("*", (req, res) => res.status(404).send("404 Page Not Found"));
 app.use(errorHandler); // 500 error handler for generic errors
