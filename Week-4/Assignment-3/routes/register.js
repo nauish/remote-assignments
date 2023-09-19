@@ -33,7 +33,25 @@ const register = async (req, res, next) => {
 
 const login = async (req, res, next) => {
   try {
-  } catch (error) {}
+    const { email, password } = req.body;
+    const [query] = await pool.query(`SELECT * FROM user WHERE email = ?`, [
+      email,
+    ]);
+    const user = query[0];
+    if (user) {
+      const validPassword = await bcrypt.compare(password, user.password);
+      if (validPassword) {
+        res.send("Valid Email and Password");
+      } else {
+        res.status(401).send("Wrong Password");
+      }
+    } else {
+      res.status(404).send("User not found!");
+    }
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
 };
 
 router.post("/register", register);
