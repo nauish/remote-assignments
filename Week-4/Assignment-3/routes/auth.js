@@ -24,7 +24,9 @@ const register = async (req, res, next) => {
       email,
       hash,
     ]);
-    res.send("Registration successful!");
+    res
+      .status(201)
+      .json({ success: true, message: "Registered successfully!" });
   } catch (error) {
     console.log(error);
     next(error);
@@ -41,12 +43,14 @@ const login = async (req, res, next) => {
     if (user) {
       const validPassword = await bcrypt.compare(password, user.password);
       if (validPassword) {
-        res.send("Valid Email and Password");
+        res
+          .status(200)
+          .json({ success: true, message: "Valid Email and Password" });
       } else {
-        res.status(401).send("Wrong Password");
+        res.status(401).json({ success: false, error: "Wrong Password" });
       }
     } else {
-      res.status(404).send("User not found!");
+      res.status(404).json({ success: false, error: "User not found!" });
     }
   } catch (error) {
     console.log(error);
