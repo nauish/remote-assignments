@@ -1,13 +1,30 @@
 function ajax(src, callback) {
   // your code here
   const xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      callback(JSON.parse(xhr.responseText));
+  xhr.open("GET", src);
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      return callback(JSON.parse(xhr.responseText));
+    } else {
+      console.error("Error!", xhr.statusText);
     }
   };
-  xhr.open("GET", src);
   xhr.send();
+}
+
+// Traditional AJAX with XMLHttpRequest object
+async function ajaxFetch(src, callback) {
+  try {
+    const response = await fetch(src);
+    if (!response.ok) {
+      throw new Error(`Error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    await callback(data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function render(data) {
