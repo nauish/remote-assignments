@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% if (errorMessage) { %>
+    <p><%= errorMessage %></p>
+    <% } %>
+    <h1>Welcome to Rick' App!</h1>
+    <h2 class="register">New User? Register Now</h2>
+    <form action="/register" method="post" class="register">
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        id="reg-email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        name="password"
+        id="reg-password"
+        placeholder="Password"
+        required
+      />
+      <label for="password">Confirm password: </label>
+      <input
+        type="password"
+        name="confirmation"
+        id="confirmation"
+        placeholder="Confirm Password"
+        required
+      />
+
+      <input type="submit" value="Register Now" />
+    </form>
+    <h2 class="login">Existing User? Log In</h2>
+    <form action="/login" method="post" class="login">
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        id="login-email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        name="password"
+        id="login-password"
+        placeholder="Password"
+        required
+      />
+      <input type="submit" value="login" />
+    </form>
+  </body>
+</html>
