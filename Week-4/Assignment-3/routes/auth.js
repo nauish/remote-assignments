@@ -1,32 +1,45 @@
-const express = require("express");
-const mysql = require("mysql2");
-const bcrypt = require("bcrypt"); // Password encryption
-const dotenv = require("dotenv");
+import e, { Router } from "express";
+import { createPool } from "mysql2";
+import { hash as _hash, compare } from "bcrypt"; // Password encryption
+import { config } from "dotenv";
 
-dotenv.config({ path: "./.env" });
+config({ path: "./.env" });
 
-const router = express.Router();
+const router = Router();
 
-const pool = mysql
-  .createPool({
-    host: "127.0.0.1", // Localhost
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: "assignment",
-  })
-  .promise();
+const pool = createPool({
+  host: "127.0.0.1", // Localhost
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: "assignment",
+}).promise();
 
 const register = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
-    const hash = await bcrypt.hash(password, 10);
+    const { email, password, confirmation } = req.body;
+
+    const [query] = await pool.query(`SELECT * FROM user WHERE email = ?`, [
+      email,
+    ]);
+
+    if (query.length > 0) {
+      return res.render("index.ejs", {
+        errorMessage: "User email is already in the database",
+      });
+    } else if (password !== confirmation) {
+      return res.render("index.ejs", {
+        errorMessage: "Password and confirmation do not match!",
+      });
+    }
+
+    const hash = await _hash(password, 10);
     await pool.query(`INSERT INTO user (email, password) VALUES (?, ?)`, [
       email,
       hash,
     ]);
-    res
-      .status(201)
-      .json({ success: true, message: "Registered successfully!" });
+    req.session.status = "login success";
+    req.session.email = `${email}`;
+    res.redirect("/member");
   } catch (error) {
     console.log(error);
     next(error);
@@ -41,16 +54,18 @@ const login = async (req, res, next) => {
     ]);
     const user = query[0];
     if (user) {
-      const validPassword = await bcrypt.compare(password, user.password);
+      const validPassword = await compare(password, user.password);
       if (validPassword) {
-        res
-          .status(200)
-          .json({ success: true, message: "Valid Email and Password" });
+        req.session.status = "login success";
+        req.session.email = `${email}`;
+        res.redirect("/member");
       } else {
-        res.status(401).json({ success: false, error: "Wrong Password" });
+        res.render("index.ejs", {
+          errorMessage: "Wrong Password!",
+        });
       }
     } else {
-      res.status(404).json({ success: false, error: "User not found!" });
+      res.render("index.ejs", { errorMessage: "Email Not Found!" });
     }
   } catch (error) {
     console.log(error);
@@ -58,7 +73,18 @@ const login = async (req, res, next) => {
   }
 };
 
+const logout = (req, res) => {
+  req.session.destroy((error) => {
+    if (error) {
+      console.error(error);
+    } else {
+      res.redirect("/");
+    }
+  });
+};
+
 router.post("/register", register);
 router.post("/login", login);
+router.post("/logout", logout);
 
-module.exports = router;
+export default router;
