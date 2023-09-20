@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick's App</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
-    <% if (errorMessage) { %>
-    <p><%= errorMessage %></p>
-    <% } %>
     <h1>Welcome to Rick' App!</h1>
-    <h2 class="register">New User? Register Now</h2>
-    <form action="/register" method="post" class="register">
+    <div class="message-container"></div>
+    <h2 id="register-form">New User? Register Now</h2>
+    <form class="register">
       <label for="email">Email: </label>
       <input
         type="email"
@@ -37,10 +36,10 @@
         required
       />
 
-      <input type="submit" value="Register Now" />
+      <button type="button" id="register-now">Register</button>
     </form>
-    <h2 class="login">Existing User? Log In</h2>
-    <form action="/login" method="post" class="login">
+    <h2 id="login-form">Existing User? Log In</h2>
+    <form class="login">
       <label for="email">Email: </label>
       <input
         type="email"
@@ -57,7 +56,8 @@
         placeholder="Password"
         required
       />
-      <input type="submit" value="login" />
+      <button type="button" id="login-now">Login</button>
     </form>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import e, { Router } from "express";
+import { Router } from "express";
 import { createPool } from "mysql2";
 import { hash as _hash, compare } from "bcrypt"; // Password encryption
 import { config } from "dotenv";
@@ -23,12 +23,14 @@ const register = async (req, res, next) => {
     ]);
 
     if (query.length > 0) {
-      return res.render("index.ejs", {
-        errorMessage: "User email is already in the database",
+      return res.status(409).json({
+        success: false,
+        message: "User email is already in the database",
       });
     } else if (password !== confirmation) {
-      return res.render("index.ejs", {
-        errorMessage: "Password and confirmation do not match!",
+      return res.status(400).json({
+        success: false,
+        message: "Password and confirmation do not match!",
       });
     }
 
@@ -39,7 +41,9 @@ const register = async (req, res, next) => {
     ]);
     req.session.status = "login success";
     req.session.email = `${email}`;
-    res.redirect("/member");
+    res
+      .status(201)
+      .json({ success: true, message: "Registered successfully!" });
   } catch (error) {
     console.log(error);
     next(error);
@@ -58,14 +62,14 @@ const login = async (req, res, next) => {
       if (validPassword) {
         req.session.status = "login success";
         req.session.email = `${email}`;
-        res.redirect("/member");
+        res
+          .status(200)
+          .json({ success: true, message: "Valid Email and Password" });
       } else {
-        res.render("index.ejs", {
-          errorMessage: "Wrong Password!",
-        });
+        res.status(400).json({ success: false, message: "Wrong Password!" });
       }
     } else {
-      res.render("index.ejs", { errorMessage: "Email Not Found!" });
+      res.status(404).json({ success: false, message: "Email not found!" });
     }
   } catch (error) {
     console.log(error);
@@ -73,6 +77,7 @@ const login = async (req, res, next) => {
   }
 };
 
+// Log out
 const logout = (req, res) => {
   req.session.destroy((error) => {
     if (error) {
