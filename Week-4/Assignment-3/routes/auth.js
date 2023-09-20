@@ -27,6 +27,11 @@ const register = async (req, res, next) => {
         success: false,
         message: "User email is already in the database",
       });
+    } else if (!password) {
+      return res.status(400).json({
+        success: false,
+        message: "You must enter a password!",
+      });
     } else if (password !== confirmation) {
       return res.status(400).json({
         success: false,
@@ -66,7 +71,7 @@ const login = async (req, res, next) => {
           .status(200)
           .json({ success: true, message: "Valid Email and Password" });
       } else {
-        res.status(400).json({ success: false, message: "Wrong Password!" });
+        res.status(401).json({ success: false, message: "Wrong Password!" });
       }
     } else {
       res.status(404).json({ success: false, message: "Email not found!" });
