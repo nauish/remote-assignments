@@ -14,36 +14,49 @@ async function postAndFetchJson(inputFromUser, urlToPostTo) {
   }
 }
 
-const registerBtn = document.getElementById("register-now");
-const loginBtn = document.getElementById("login-now");
+const registrationAPI = "../auth/register";
+const loginAPI = "../auth/login";
 
+const registerForm = document.querySelector(".register");
+const loginForm = document.querySelector(".login");
 const messageBoard = document.querySelector(".message-container");
-const registrationAPI = "http://localhost:3000/register";
-const loginAPI = "http://localhost:3000/login";
 
-registerBtn.addEventListener("click", async () => {
-  const email = document.getElementById("reg-email").value;
-  const password = document.getElementById("reg-password").value;
-  const confirmation = document.getElementById("confirmation").value;
+registerForm.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Prevent the default form submission
+  const email = registerForm.elements.email.value;
+  const password = registerForm.elements.password.value;
+  const confirmation = registerForm.elements.confirmation.value;
+  if (!email || !password) {
+    messageBoard.textContent = "Please fill out you email and password!";
+  }
   const registrationResult = await postAndFetchJson(
     { email, password, confirmation },
     registrationAPI
   );
+  messageBoard.textContent = registrationResult.message;
   if (registrationResult.success) {
-    window.location.href = "http://localhost:3000/member";
+    messageBoard.style.backgroundColor = "lightgreen";
+    setTimeout(() => {
+      window.location.href = "../member";
+    }, 500);
   } else {
-    messageBoard.textContent = registrationResult.message;
+    messageBoard.style.backgroundColor = "pink";
   }
 });
 
-loginBtn.addEventListener("click", async () => {
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
+loginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const email = loginForm.elements.email.value;
+  const password = loginForm.elements.password.value;
   const loginResult = await postAndFetchJson({ email, password }, loginAPI);
 
+  messageBoard.textContent = loginResult.message;
   if (loginResult.success) {
-    window.location.href = "http://localhost:3000/member";
+    messageBoard.style.backgroundColor = "lightgreen";
+    setTimeout(() => {
+      window.location.href = "../member";
+    }, 300);
   } else {
-    messageBoard.textContent = loginResult.message;
+    messageBoard.style.backgroundColor = "pink";
   }
 });
