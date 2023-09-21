@@ -1,6 +1,6 @@
 async function postAndFetchJson(inputFromUser, urlToPostTo) {
   try {
-    const response = await fetch(`${urlToPostTo}`, {
+    const response = await fetch(urlToPostTo, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
