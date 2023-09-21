@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
 
-app.use("/", authRoutes);
+app.use("/auth", authRoutes);
 app.use("/member", memberRoutes);
 
 app.all("*", (req, res) =>

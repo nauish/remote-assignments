@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Member</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
-    <h1>Hello! Valued Member!</h1>
+    <h1>Hello!</h1>
     <p>Your Email: <%= email %></p>
-    <form action="/logout" method="post">
+    <form action="auth/logout" method="post">
       <button type="submit">Logout</button>
     </form>
   </body>
