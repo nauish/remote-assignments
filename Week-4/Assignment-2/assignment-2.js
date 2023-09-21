@@ -12,7 +12,7 @@ function ajax(src, callback) {
   xhr.send();
 }
 
-// Traditional AJAX with XMLHttpRequest object
+// Use async await syntax to fetch from API
 async function ajaxFetch(src, callback) {
   try {
     const response = await fetch(src);
