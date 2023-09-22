@@ -36,3 +36,12 @@ Hello World!
 
 - Assignment 1-4: Node.js + Express Server **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-3/Assignments)**
 - Assignment 5: TwoSum **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-3/Assignment-5)**
+
+## Week 4
+
+本周學習 Asynchronous JavaScript 與 MySQL 系列的 Query Languages
+
+- Assignment 1: Asynchronous function **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-4/Assignment-1)**
+- Assignment 2: Callback Function and Advanced HTML DOM **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-4/Assignment-2)** **[Page](https://nauish.github.io/remote-assignments/Week-4/Assignment-2/)**
+- Assignment 3: Build a Website with MySQL **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-4/Assignment-3)**
+- Assignment 4: Design Table Schema (Advanced Optional) **[Source](https://github.com/nauish/remote-assignments/tree/main/Week-4/Assignment-4)**
