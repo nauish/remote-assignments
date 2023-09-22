@@ -7,5 +7,5 @@ LEFT OUTER JOIN user ON article.author_id = user.id;
 SELECT article.id, user.email, article.title, article.content
 FROM article
 LEFT OUTER JOIN user ON article.author_id = user.id
-WHERE article.id LIMIT 6 OFFSET 6;
-ORDER BY article.id;
+ORDER BY article.id
+LIMIT 6 OFFSET 6;
