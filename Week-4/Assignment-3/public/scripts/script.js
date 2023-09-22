@@ -27,14 +27,13 @@ function handleResult(result) {
 function listenForFormSubmit(form, api) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const email = form.elements.email.value;
-    const password = form.elements.password.value;
-    const confirmation = form.elements.confirmation?.value; // ? = Optional chaining prevents errors when undefined
-
-    const result = await postAndFetchJson(
-      { email, password, confirmation },
-      api
-    );
+    const { email, password, confirmation } = form.elements;
+    const data = {
+      email: email.value,
+      password: password.value,
+      confirmation: confirmation?.value, // ? = Optional chaining prevents errors when undefined
+    };
+    const result = await postAndFetchJson(data, api);
 
     handleResult(result);
   });
