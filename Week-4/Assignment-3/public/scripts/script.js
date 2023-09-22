@@ -7,11 +7,37 @@ async function postAndFetchJson(inputFromUser, urlToPostTo) {
       },
       body: JSON.stringify(inputFromUser),
     });
-    const responseJson = await response.json();
-    return responseJson;
+    return await response.json();
   } catch (error) {
     console.error("Error:", error);
   }
+}
+
+function handleResult(result) {
+  messageBoard.textContent = result.message;
+  messageBoard.style.backgroundColor = result.success ? "lightgreen" : "pink"; // Ternary condition
+
+  if (result.success) {
+    setTimeout(() => {
+      window.location.href = "../member";
+    }, 500);
+  }
+}
+
+function listenForFormSubmit(form, api) {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+    const confirmation = form.elements.confirmation?.value; // ? = Optional chaining prevents errors when undefined
+
+    const result = await postAndFetchJson(
+      { email, password, confirmation },
+      api
+    );
+
+    handleResult(result);
+  });
 }
 
 const registrationAPI = "../auth/register";
@@ -21,42 +47,5 @@ const registerForm = document.querySelector(".register");
 const loginForm = document.querySelector(".login");
 const messageBoard = document.querySelector(".message-container");
 
-registerForm.addEventListener("submit", async (event) => {
-  event.preventDefault(); // Prevent the default form submission
-  const email = registerForm.elements.email.value;
-  const password = registerForm.elements.password.value;
-  const confirmation = registerForm.elements.confirmation.value;
-  if (!email || !password) {
-    messageBoard.textContent = "Please fill out you email and password!";
-  }
-  const registrationResult = await postAndFetchJson(
-    { email, password, confirmation },
-    registrationAPI
-  );
-  messageBoard.textContent = registrationResult.message;
-  if (registrationResult.success) {
-    messageBoard.style.backgroundColor = "lightgreen";
-    setTimeout(() => {
-      window.location.href = "../member";
-    }, 500);
-  } else {
-    messageBoard.style.backgroundColor = "pink";
-  }
-});
-
-loginForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const email = loginForm.elements.email.value;
-  const password = loginForm.elements.password.value;
-  const loginResult = await postAndFetchJson({ email, password }, loginAPI);
-
-  messageBoard.textContent = loginResult.message;
-  if (loginResult.success) {
-    messageBoard.style.backgroundColor = "lightgreen";
-    setTimeout(() => {
-      window.location.href = "../member";
-    }, 300);
-  } else {
-    messageBoard.style.backgroundColor = "pink";
-  }
-});
+listenForFormSubmit(registerForm, registrationAPI);
+listenForFormSubmit(loginForm, loginAPI);
