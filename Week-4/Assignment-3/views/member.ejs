@@ -80,5 +80,16 @@
 
       handleResult(result);
     });
+
+    document.querySelector("#new-article").addEventListener("click", () => {
+      if (
+        submitForm.style.display === "none" ||
+        submitForm.style.display === ""
+      ) {
+        submitForm.style.display = "block";
+      } else {
+        submitForm.style.display = "none";
+      }
+    });
   </script>
 </html>

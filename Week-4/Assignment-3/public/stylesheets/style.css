@@ -67,3 +67,7 @@ button:hover {
   cursor: pointer;
   opacity: 85%;
 }
+
+.new-article {
+  display: none;
+}
