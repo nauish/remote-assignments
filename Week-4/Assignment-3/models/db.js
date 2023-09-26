@@ -29,9 +29,23 @@ const selectArticleByEmail = async (email) => {
     `SELECT title, content FROM article INNER JOIN user ON article.author_id = user.id WHERE email = ?`,
     [email]
   );
+
   return query.length > 0
     ? query
     : [{ title: "You haven't published any articles", content: "No content" }];
 };
 
-export { selectUserByEmail, insertUser, selectArticleByEmail };
+const insertArticle = async (title, content, author) => {
+  const [getAuthorID] = await pool.query(
+    "SELECT id FROM user WHERE email = ?",
+    [author]
+  );
+  const email = getAuthorID[0].id;
+
+  await pool.query(
+    `INSERT INTO article (title, content, author_id) VALUES (?, ?, ?)`,
+    [title, content, email]
+  );
+};
+
+export { selectUserByEmail, insertUser, selectArticleByEmail, insertArticle };

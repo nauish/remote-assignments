@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { selectArticleByEmail } from "../models/db.js";
+import { selectArticleByEmail, insertArticle } from "../models/db.js";
 
 const router = Router();
 
@@ -11,6 +11,19 @@ router.get("/", async (req, res) => {
   } else {
     res.redirect("/");
   }
+});
+
+router.post("/newArticle", async (req, res) => {
+  const { title, content } = req.body;
+  if (!title || !content) {
+    return res.status(400).json({
+      success: false,
+      message: "Please fill in the title and the content before submitting",
+    });
+  }
+
+  await insertArticle(title, content, req.session.email);
+  res.status(201).json({ success: true, message: "New article added!" });
 });
 
 export default router;
