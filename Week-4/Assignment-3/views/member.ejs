@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Member</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📔</text></svg>"
+    />
     <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
@@ -37,59 +41,5 @@
     </form>
     <div class="message-container"></div>
   </body>
-  <script>
-    async function postAndFetchJson(inputFromUser, urlToPostTo) {
-      try {
-        const response = await fetch(urlToPostTo, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(inputFromUser),
-        });
-        return await response.json();
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    }
-
-    function handleResult(result) {
-      messageBoard.textContent = result.message;
-      messageBoard.style.backgroundColor = result.success
-        ? "lightgreen"
-        : "pink"; // Ternary condition
-
-      if (result.success) {
-        setTimeout(() => {
-          window.location.href = "../member";
-        }, 500);
-      }
-    }
-
-    const memberAPI = "../member/newArticle";
-    const submitForm = document.querySelector(".new-article");
-    const messageBoard = document.querySelector(".message-container");
-    submitForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const { title, content } = submitForm.elements;
-      const data = {
-        title: title.value,
-        content: content.value,
-      };
-      const result = await postAndFetchJson(data, memberAPI);
-
-      handleResult(result);
-    });
-
-    document.querySelector("#new-article").addEventListener("click", () => {
-      if (
-        submitForm.style.display === "none" ||
-        submitForm.style.display === ""
-      ) {
-        submitForm.style.display = "block";
-      } else {
-        submitForm.style.display = "none";
-      }
-    });
-  </script>
+  <script src="scripts/member.js"></script>
 </html>
